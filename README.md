@@ -19,3 +19,5 @@ To start working on PySpark, we need to:
 Pass the data to parallel collections: make data distributed in separate space, and could operate in parallel. 
 
 distribute_data = sc.parallel(data)
+
+The distribute_data is stored in RDD format.
