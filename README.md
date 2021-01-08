@@ -11,7 +11,9 @@ MLlib: scalable machine learning library
 
 Deploy spark computing:
 
-Spark work with RDD data architecture system and hadoop data storage. 
+Spark work with RDD data architecture system and hadoop data storage. Resilient Distributed Dataset(RDD)'s advantage: 
+1. Distributed storage, which is safe for data when one of the machine is crashed
+2. Faster manipulation of data, support parallel computing over distributed engine that is helpful during big data applications.
 
 Spark is written in Scala, run on Java environment, but support mulitple language API such as python. Pyspark is an efficient tool to deploy spark with python.
 
