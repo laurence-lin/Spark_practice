@@ -1,0 +1,6 @@
+Spark Context parallelize collections:
+
+sc.parallelize(data, n_partitions)
+
+We set multiple partitions to cut the dataset, Spark run one task for each partitions. Usually spark set the number automatically based on our cluster(Like the number of CPUs in the cluster).
+So we don't need to set this manually.
