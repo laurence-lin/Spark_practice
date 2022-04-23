@@ -1,0 +1,3 @@
+先從 twitter 取得 post: python get_tweet.py
+再將 post 發送給 Spark streaming: python spark_app.py
+再執行 dashboard, 將 twitter post 的分析結果顯示於 UI: python app.py
