@@ -1,0 +1,232 @@
+Initializing environment —docker setup script.
+LENSES_SECURITY_PASSWORD is not set. You may be using the default password which is dangerous.
+[Variable needed quotes] lenses.sql.state.dir=/data/kafka-streams-state
+lenses.port=8080
+Running as root. Will change data ownership to nobody:nogroup (65534:65534)
+and drop priviliges.
+Setup script finished.
+Docker environment initialized. Starting Lenses.
+================================================
+Initializing (pre-run) Lenses
+Installation directory autodetected: /opt/lenses
+Current directory: /data
+Logback configuration file autodetected: logback.xml
+These directories will be monitored for new jar files:
+ - /opt/lenses/plugins
+ - /data/plugins
+ - /opt/lenses/serde
+Starting application
+2022-05-02 07:05:42,989 INFO  [i.l.c.LensesConfig$] [ioapp-compute-0] Loading external config file : /data/lenses.conf
+2022-05-02 07:05:43,004 INFO  [i.l.c.LensesConfig$] [ioapp-compute-0] Loading external security file : /data/security.conf
+2022-05-02 07:05:43,016 WARN  [i.l.c.LensesRuntime$] [ioapp-compute-0] Invalid workspace directory: /run. Lenses user needs to be able to read and write into the folder. Defaulting to [/tmp]
+2022-05-02 07:05:43,492 INFO  [a.e.s.Slf4jLogger] [lenses-akka.actor.default-dispatcher-4] Slf4jLogger started
+2022-05-02 07:05:44,017 INFO  [i.l.b.r.StoreResource$] [ioapp-compute-0] Initializing storage to Embedded H2 (jdbc:h2:/data/storage/lensesdb;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE)
+2022-05-02 07:05:51,824 INFO  [i.l.b.Main$] [ioapp-compute-0] Lenses installation workspace folder has been created at /tmp
+2022-05-02 07:05:52,542 INFO  [i.l.b.r.FlowsResources$] [ioapp-compute-3] Applications Workspace folder created for lenses installation [08bb9ec2-1277-402a-aae8-21e929cbc49f]: /tmp/08bb9ec2-1277-402a-aae8-21e929cbc49f
+2022-05-02 07:05:54,063 INFO  [i.l.LogConfiguration$] [ioapp-compute-6] 
+
+ System name         : lenses
+ Storage             : Embedded H2 (jdbc:h2:/data/storage/lensesdb;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE)
+ Kafka brokers       : N/A
+ Zookeepers          : N/A
+ Schema registry     : N/A
+ Listening on port   : 8080
+ Lenses JMX port     : None
+ Security Ldap       : false
+ Security SAML       : false
+ Security Kerberos   : false
+ Security Custom HTTP: false
+ External config     : /data/lenses.conf
+ SQL Mode            : IN_PROC
+ Kubernetes config   : Not in KUBERNETES mode
+ JMX ZK              : 
+ JMX Schema Registry : 
+ JMX Connect         : 
+ Number of cores     : 8
+    
+2022-05-02 07:05:54,143 INFO  [i.l.b.MainUtils$] [ioapp-compute-5] 
+ Starting ...
+  _
+ | |
+ | |     ___ _ __  ___  ___  ___
+ | |    / _ \ '_ \/ __|/ _ \/ __|
+ | |___|  __/ | | \__ \  __/\__ \
+ |______\___|_| |_|___/\___||___/
+ By Lenses.io
+ Version: 5.0.0
+
+2022-05-02 07:05:54,210 INFO  [i.l.b.LensesMain] [ioapp-compute-5] Logical Graph Migration Started
+2022-05-02 07:05:54,255 INFO  [i.l.b.LensesMain] [ioapp-compute-2] Logical Graph Migration completed.
+  Total Processors: 0
+  Processors to Migrate: 0
+  Successfully Migrated: 0
+  Migration Failures: 0
+  Ids of failed processors: []
+2022-05-02 07:05:54,362 INFO  [i.l.b.LensesMain] [ioapp-compute-2] Sql Engines instantiated successfully using 'InProcess' mode.
+2022-05-02 07:05:57,224 INFO  [i.l.b.r.HttpServer] [ioapp-compute-5] Lenses http server started and listening to requests.
+2022-05-02 07:06:24,752 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-4] Request: GET->http://localhost:8080/ returned 200 OK in 184ms
+2022-05-02 07:06:24,878 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/js/vendors~app.bc55702aa6eb560750fe.js returned 200 OK in 45ms
+2022-05-02 07:06:24,878 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/13.1f584ee7da95b2d02463.css returned 200 OK in 62ms
+2022-05-02 07:06:24,878 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/app.1f584ee7da95b2d02463.css returned 200 OK in 49ms
+2022-05-02 07:06:24,879 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/box-info.js?1 returned 200 OK in 59ms
+2022-05-02 07:06:24,883 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: GET->http://localhost:8080/src/assets/fonts/lenses.woff?v=1.0.0 returned 200 OK in 66ms
+2022-05-02 07:06:24,891 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: GET->http://localhost:8080/js/app.bcdb5a4c1da492b056ad.js returned 200 OK in 37ms
+2022-05-02 07:06:25,367 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/src/assets/icons/icon_ellipse_red.svg returned 200 OK in 23ms
+2022-05-02 07:06:25,374 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: GET->http://localhost:8080/src/assets/fonts/Roboto-Regular.woff returned 200 OK in 20ms
+2022-05-02 07:06:25,428 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: GET->http://localhost:8080/src/assets/icons/favicon.png returned 200 OK in 27ms
+2022-05-02 07:06:25,476 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/auth returned 401 Unauthorized in 132ms
+2022-05-02 07:06:25,573 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: GET->http://localhost:8080/login.html?redirect=/ returned 200 OK in 52ms
+2022-05-02 07:06:25,625 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/js/login.104aa36b0d543899f2b1.js returned 200 OK in 20ms
+2022-05-02 07:06:25,644 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/login.1f584ee7da95b2d02463.css returned 200 OK in 34ms
+2022-05-02 07:06:25,652 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/src/assets/icons/lensesio-logo.png returned 200 OK in 48ms
+2022-05-02 07:06:25,694 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/license returned 401 Unauthorized in 350ms
+2022-05-02 07:06:26,140 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/environment/sso returned 200 OK in 26ms
+2022-05-02 07:06:26,182 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: GET->http://localhost:8080/api/auth returned 401 Unauthorized in 32ms
+2022-05-02 07:08:48,063 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: POST->http://localhost:8080/api/login returned 401 Unauthorized in 41ms
+2022-05-02 07:09:24,221 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: POST->http://localhost:8080/api/login returned 200 OK in 18ms
+2022-05-02 07:09:24,267 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/api/v1/setup returned 200 OK in 26ms
+2022-05-02 07:09:24,285 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/setup.html returned 200 OK in 5ms
+2022-05-02 07:09:24,336 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/setup.1f584ee7da95b2d02463.css returned 200 OK in 6ms
+2022-05-02 07:09:24,339 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/js/setup.262ac94b677275b14731.js returned 200 OK in 7ms
+2022-05-02 07:09:24,669 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/v1/setup returned 200 OK in 16ms
+2022-05-02 07:09:24,711 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/api/auth returned 200 OK in 25ms
+2022-05-02 07:09:24,743 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/environment returned 200 OK in 24ms
+2022-05-02 07:09:24,757 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: GET->http://localhost:8080/0.1f584ee7da95b2d02463.css returned 200 OK in 8ms
+2022-05-02 07:09:24,761 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/js/0.5937ec4171bc371435b4.js returned 200 OK in 9ms
+2022-05-02 07:09:24,772 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/js/15.80f675e465f47c021b87.js returned 200 OK in 13ms
+2022-05-02 07:09:24,776 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/js/14.49e59fcba4dcd61f0cbc.js returned 200 OK in 10ms
+2022-05-02 07:09:24,777 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: GET->http://localhost:8080/js/2.3d47bb45e10b854ffcc7.js returned 200 OK in 12ms
+2022-05-02 07:09:24,785 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-4] Request: GET->http://localhost:8080/js/4.aa9afaed588b24ae5168.js returned 200 OK in 10ms
+2022-05-02 07:09:24,792 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/14.1f584ee7da95b2d02463.css returned 200 OK in 15ms
+2022-05-02 07:09:24,892 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-4] Request: GET->http://localhost:8080/src/assets/icons/lenses_logo.svg returned 200 OK in 5ms
+2022-05-02 07:09:24,892 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-4] Request: GET->http://localhost:8080/src/assets/icons/Containers.svg returned 200 OK in 6ms
+2022-05-02 07:09:24,923 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/20fd1704ea223900efa9fd4e869efb08.woff2 returned 200 OK in 7ms
+2022-05-02 07:09:24,923 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/src/assets/fonts/Roboto-Medium.woff returned 200 OK in 7ms
+2022-05-02 07:09:25,148 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/v2/telemetry returned 200 OK in 262ms
+2022-05-02 07:09:25,346 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 169ms
+2022-05-02 07:09:25,382 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 32ms
+2022-05-02 07:09:35,530 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 20ms
+2022-05-02 07:09:55,838 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3527ms
+2022-05-02 07:11:02,959 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3057ms
+2022-05-02 07:13:01,275 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3053ms
+2022-05-02 07:39:53,989 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 24ms
+2022-05-02 07:47:33,983 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3049ms
+2022-05-02 07:53:24,026 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-14] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3038ms
+2022-05-02 07:54:31,473 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3044ms
+2022-05-02 07:55:08,408 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3044ms
+2022-05-02 07:55:27,827 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3036ms
+2022-05-02 08:14:25,094 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-13] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 22ms
+2022-05-02 08:30:43,646 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3043ms
+2022-05-02 08:49:25,326 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 17ms
+2022-05-02 12:37:32,205 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-4] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3858ms
+2022-05-02 12:39:25,416 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 19ms
+2022-05-02 12:49:45,550 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3035ms
+2022-05-02 12:50:23,507 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 18ms
+2022-05-02 12:50:23,530 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 18ms
+2022-05-02 12:50:27,964 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 21ms
+2022-05-02 12:53:47,820 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-12] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3034ms
+2022-05-02 12:57:44,562 INFO  [i.l.b.r.AkkaHttp] [ioapp-compute-5] Shutting down Akka Http server...
+2022-05-02 12:57:44,567 INFO  [i.l.b.r.AkkaHttp] [ioapp-compute-6] Shutdown of Akka Http server completed
+2022-05-02 12:57:44,582 INFO  [i.l.b.r.FlowsResources$] [ioapp-compute-5] Applications workspace folder has been cleaned up
+2022-05-02 12:57:44,584 INFO  [i.l.b.Main$] [ioapp-compute-0] Lenses installation workspace folder has been cleaned up
+2022-05-02 12:57:44,632 INFO  [i.l.b.r.AkkaResources$] [ioapp-compute-0] Shutting down ActorSystem...
+2022-05-02 12:57:44,671 INFO  [i.l.b.r.AkkaResources$] [ioapp-compute-2] ActorSystem shutdown completed
+2022-05-02 12:57:44,672 INFO  [i.l.b.Main$] [ioapp-compute-2] Lenses shutdown completed
+Initializing environment —docker setup script.
+LENSES_SECURITY_PASSWORD is not set. You may be using the default password which is dangerous.
+[Variable needed quotes] lenses.sql.state.dir=/data/kafka-streams-state
+lenses.port=8080
+Running as root. Will change data ownership to nobody:nogroup (65534:65534)
+and drop priviliges.
+Setup script finished.
+Docker environment initialized. Starting Lenses.
+================================================
+Initializing (pre-run) Lenses
+Installation directory autodetected: /opt/lenses
+Current directory: /data
+Logback configuration file autodetected: logback.xml
+These directories will be monitored for new jar files:
+ - /opt/lenses/plugins
+ - /data/plugins
+ - /opt/lenses/serde
+Starting application
+2022-05-02 12:57:47,457 INFO  [i.l.c.LensesConfig$] [ioapp-compute-0] Loading external config file : /data/lenses.conf
+2022-05-02 12:57:47,471 INFO  [i.l.c.LensesConfig$] [ioapp-compute-0] Loading external security file : /data/security.conf
+2022-05-02 12:57:47,485 WARN  [i.l.c.LensesRuntime$] [ioapp-compute-0] Invalid workspace directory: /run. Lenses user needs to be able to read and write into the folder. Defaulting to [/tmp]
+2022-05-02 12:57:48,107 INFO  [a.e.s.Slf4jLogger] [lenses-akka.actor.default-dispatcher-5] Slf4jLogger started
+2022-05-02 12:57:48,819 INFO  [i.l.b.r.StoreResource$] [ioapp-compute-0] Initializing storage to Embedded H2 (jdbc:h2:/data/storage/lensesdb;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE)
+2022-05-02 12:57:54,523 INFO  [i.l.b.Main$] [ioapp-compute-0] Lenses installation workspace folder has been created at /tmp
+2022-05-02 12:57:55,443 INFO  [i.l.b.r.FlowsResources$] [ioapp-compute-1] Applications Workspace folder created for lenses installation [08bb9ec2-1277-402a-aae8-21e929cbc49f]: /tmp/08bb9ec2-1277-402a-aae8-21e929cbc49f
+2022-05-02 12:57:57,251 INFO  [i.l.LogConfiguration$] [ioapp-compute-3] 
+
+ System name         : lenses
+ Storage             : Embedded H2 (jdbc:h2:/data/storage/lensesdb;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE)
+ Kafka brokers       : N/A
+ Zookeepers          : N/A
+ Schema registry     : N/A
+ Listening on port   : 8080
+ Lenses JMX port     : None
+ Security Ldap       : false
+ Security SAML       : false
+ Security Kerberos   : false
+ Security Custom HTTP: false
+ External config     : /data/lenses.conf
+ SQL Mode            : IN_PROC
+ Kubernetes config   : Not in KUBERNETES mode
+ JMX ZK              : 
+ JMX Schema Registry : 
+ JMX Connect         : 
+ Number of cores     : 8
+    
+2022-05-02 12:57:57,326 INFO  [i.l.b.MainUtils$] [ioapp-compute-4] 
+ Starting ...
+  _
+ | |
+ | |     ___ _ __  ___  ___  ___
+ | |    / _ \ '_ \/ __|/ _ \/ __|
+ | |___|  __/ | | \__ \  __/\__ \
+ |______\___|_| |_|___/\___||___/
+ By Lenses.io
+ Version: 5.0.0
+
+2022-05-02 12:57:57,400 INFO  [i.l.b.LensesMain] [ioapp-compute-4] Logical Graph Migration Started
+2022-05-02 12:57:57,445 INFO  [i.l.b.LensesMain] [ioapp-compute-5] Logical Graph Migration completed.
+  Total Processors: 0
+  Processors to Migrate: 0
+  Successfully Migrated: 0
+  Migration Failures: 0
+  Ids of failed processors: []
+2022-05-02 12:57:57,546 INFO  [i.l.b.LensesMain] [ioapp-compute-5] Sql Engines instantiated successfully using 'InProcess' mode.
+2022-05-02 12:58:01,255 INFO  [i.l.b.r.HttpServer] [ioapp-compute-4] Lenses http server started and listening to requests.
+2022-05-02 12:58:29,924 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/ returned 200 OK in 153ms
+2022-05-02 12:58:30,059 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/js/app.bcdb5a4c1da492b056ad.js returned 200 OK in 50ms
+2022-05-02 12:58:30,059 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/js/vendors~app.bc55702aa6eb560750fe.js returned 200 OK in 52ms
+2022-05-02 12:58:30,501 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-5] Request: GET->http://localhost:8080/src/assets/fonts/Roboto-Regular.woff returned 200 OK in 18ms
+2022-05-02 12:58:30,724 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/v1/setup returned 401 Unauthorized in 256ms
+2022-05-02 12:58:30,785 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/js/login.104aa36b0d543899f2b1.js returned 200 OK in 19ms
+2022-05-02 12:58:30,786 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/login.1f584ee7da95b2d02463.css returned 200 OK in 19ms
+2022-05-02 12:58:31,297 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/environment/sso returned 200 OK in 33ms
+2022-05-02 12:58:31,355 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/api/auth returned 401 Unauthorized in 48ms
+2022-05-02 12:58:34,063 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: POST->http://localhost:8080/api/login returned 200 OK in 51ms
+2022-05-02 12:58:34,103 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/v1/setup returned 200 OK in 31ms
+2022-05-02 12:58:34,169 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/js/setup.262ac94b677275b14731.js returned 200 OK in 12ms
+2022-05-02 12:58:34,169 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/setup.1f584ee7da95b2d02463.css returned 200 OK in 12ms
+2022-05-02 12:58:34,523 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/api/v1/setup returned 200 OK in 27ms
+2022-05-02 12:58:34,565 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/auth returned 200 OK in 32ms
+2022-05-02 12:58:34,605 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/environment returned 200 OK in 33ms
+2022-05-02 12:58:34,623 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/js/0.5937ec4171bc371435b4.js returned 200 OK in 10ms
+2022-05-02 12:58:34,790 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/20fd1704ea223900efa9fd4e869efb08.woff2 returned 200 OK in 12ms
+2022-05-02 12:58:34,819 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/src/assets/fonts/Roboto-Medium.woff returned 200 OK in 14ms
+2022-05-02 12:58:35,110 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-10] Request: GET->http://localhost:8080/api/v2/telemetry returned 200 OK in 366ms
+2022-05-02 12:58:35,283 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 154ms
+2022-05-02 12:58:35,314 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-7] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 25ms
+2022-05-02 12:58:42,367 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-6] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 23ms
+2022-05-02 12:58:52,636 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-27] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3580ms
+2022-05-02 13:06:17,522 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/setup/environment returned 200 OK in 5ms
+2022-05-02 13:06:17,759 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/api/v1/setup returned 200 OK in 13ms
+2022-05-02 13:06:17,779 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/api/auth returned 200 OK in 4ms
+2022-05-02 13:06:17,789 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-27] Request: GET->http://localhost:8080/environment returned 200 OK in 5ms
+2022-05-02 13:06:17,945 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/api/v2/telemetry returned 200 OK in 50ms
+2022-05-02 13:06:17,980 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-27] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 23ms
+2022-05-02 13:06:19,647 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: GET->http://localhost:8080/api/v1/token returned 200 OK in 21ms
+2022-05-02 13:06:33,567 INFO  [a.a.ActorSystemImpl] [lenses-akka.actor.default-dispatcher-8] Request: POST->http://localhost:8080/api/v1/setup/connection/test returned 400 Bad Request in 3059ms
